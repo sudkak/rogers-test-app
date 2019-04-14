@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ItemTrackerComponent } from './item-tracker/item-tracker.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ItemTrackerComponent
   ],
   imports: [
     BrowserModule,
