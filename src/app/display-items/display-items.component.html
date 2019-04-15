@@ -1,10 +1,10 @@
 <div>
-   <input type="search" name="search-item" [formControl]="searchField">
+   <input type="search" name="search-item" [formControl]="searchField" class="Items-searchTerm">
 </div>
 <ul>
   <li *ngFor="let item of currentList | searchFilter : searchTerm; let i=index">
     <input type="checkbox" class="checkbox" (click)="moveItem(i)">
     <span>{{ item }} </span>
-    <span (click)="deleteItem(i)" class="remove-item">Remove</span>
+    <span (click)="deleteItem(i)" class="Item-remove">Remove</span>
   </li>
 </ul>
