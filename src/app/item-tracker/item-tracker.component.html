@@ -1,3 +1,22 @@
-<p>
-  item-tracker works!
-</p>
+<div>
+
+  <div>
+    <form (ngSubmit)="addItems();itemForm.reset()" #itemForm="ngForm">
+      <input [(ngModel)]="item" name="item">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <span> Unpacked Items</span> <span> (</span>
+  {{unpackedItems.length}}
+  <span>)</span>
+
+  <app-display-items [currentList]="unpackedItems" [toList]="packedItems"></app-display-items>
+
+  <span>Packed Items</span> <span> (</span>
+  {{packedItems.length}}
+  <span>)</span>
+  <app-display-items [currentList]="packedItems" [toList]="unpackedItems" [isDeleteOnly]="false"></app-display-items>
+
+  <button (click)="moveAll()"> Mark as all UnPacked</button>
+</div>

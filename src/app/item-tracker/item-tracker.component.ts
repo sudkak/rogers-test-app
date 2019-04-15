@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item-tracker.component.css']
 })
 export class ItemTrackerComponent implements OnInit {
-
+   item: any = '';
+   unpackedItems: Array<any> = [];
+   packedItems: Array<any> = [];
   constructor() { }
 
   ngOnInit() {
   }
+   addItems() {
+        this.unpackedItems.push(this.item);
+      }
 
+  moveAll() {
+     this.unpackedItems.push(...this.packedItems);
+     this.packedItems = [];
+  }
 }
