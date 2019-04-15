@@ -6,3 +6,18 @@
   outline: none;
   padding: 0;
 }
+
+.new-item {
+  display: flex;
+}
+
+input {
+  adding: 0.5em;
+    border: 1px solid #f32e5b;
+    background-color: #fbbfcd;
+}
+
+.app {
+  margin: auto;
+  max-width: 400px;
+}

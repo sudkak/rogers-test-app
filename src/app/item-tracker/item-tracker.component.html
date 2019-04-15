@@ -1,6 +1,6 @@
-<div>
+<div class="app">
 
-  <div>
+  <div class="new-item">
     <form (ngSubmit)="addItems();itemForm.reset()" #itemForm="ngForm">
       <input [(ngModel)]="item" name="item">
       <button type="submit">Submit</button>
